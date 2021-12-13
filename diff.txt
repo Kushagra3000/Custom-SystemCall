@@ -1,0 +1,80 @@
+diff -r linux-5.9.1/arch/x86/entry/syscalls/syscall_64.tbl /home/aman/Downloads/linux-5.9.1/arch/x86/entry/syscalls/syscall_64.tbl
+346d345
+< 335     64      sh_task_info           sys_sh_task_info
+Only in linux-5.9.1/arch/x86/include: generated
+Only in linux-5.9.1/certs: signing_key.pem
+Only in linux-5.9.1/certs: signing_key.x509
+Only in linux-5.9.1/certs: x509.genkey
+Only in linux-5.9.1: .config
+Only in linux-5.9.1: .config.old
+Only in linux-5.9.1/include: config
+Only in linux-5.9.1/include: generated
+diff -r linux-5.9.1/include/linux/syscalls.h /home/aman/Downloads/linux-5.9.1/include/linux/syscalls.h
+1348d1347
+< 
+diff -r linux-5.9.1/kernel/sys.c /home/aman/Downloads/linux-5.9.1/kernel/sys.c
+2697,2728d2696
+< 
+< SYSCALL_DEFINE2(sh_task_info, int , pid, char *, filename)
+< {
+< 	  if (pid > 32768 || pid <= 0)
+< 		return -EINVAL;
+< 	struct task_struct *task;
+< 	
+< 	for_each_process(task)
+< 	{
+< 		if ((int)task->pid == pid)
+< 		{
+< 			printk("PID Number: %d\n", (int)task->pid);
+< 			
+< 			printk("Process: %s\n", task->comm);
+< 			
+< 			printk("Process State: %d\n", (int)task->state);
+< 			
+< 			printk("Priority: %d\n", (int)task->prio);
+< 			
+< 			printk("Exit State: %d\n", (int)task->exit_state);
+< 			
+< 			printk("Exit Code: %d\n", (int)task->exit_code);
+< 			
+< 			printk("Pdeath Signal: %d\n", (int)task->pdeath_signal);
+< 			
+< 		}
+< 	}
+< 	
+< 	return 0;
+< 
+< }
+< 
+Only in linux-5.9.1: Module.symvers
+Only in linux-5.9.1/scripts: asn1_compiler
+Only in linux-5.9.1/scripts/basic: fixdep
+Only in linux-5.9.1/scripts: bin2c
+Only in linux-5.9.1/scripts: extract-cert
+Only in linux-5.9.1/scripts/gdb/linux: constants.py
+Only in linux-5.9.1/scripts: insert-sys-cert
+Only in linux-5.9.1/scripts: kallsyms
+Only in linux-5.9.1/scripts/kconfig: conf
+Only in linux-5.9.1/scripts/kconfig: mconf
+Only in linux-5.9.1/scripts/kconfig: mconf-cfg
+Only in linux-5.9.1/scripts/mod: devicetable-offsets.h
+Only in linux-5.9.1/scripts/mod: elfconfig.h
+Only in linux-5.9.1/scripts/mod: mk_elfconfig
+Only in linux-5.9.1/scripts/mod: modpost
+Only in linux-5.9.1/scripts: recordmcount
+Only in linux-5.9.1/scripts/selinux/genheaders: genheaders
+Only in linux-5.9.1/scripts/selinux/mdp: mdp
+Only in linux-5.9.1/scripts: sign-file
+Only in linux-5.9.1/scripts: sorttable
+Only in linux-5.9.1: sh_info_task
+Only in linux-5.9.1/tools/bpf/resolve_btfids: bpf_helper_defs.h
+Only in linux-5.9.1/tools/bpf/resolve_btfids: feature
+Only in linux-5.9.1/tools/bpf/resolve_btfids: FEATURE-DUMP.libbpf
+Only in linux-5.9.1/tools/bpf/resolve_btfids: fixdep
+Only in linux-5.9.1/tools/bpf/resolve_btfids: resolve_btfids
+Only in linux-5.9.1/tools/bpf/resolve_btfids: staticobjs
+Only in linux-5.9.1/tools/objtool/arch/x86: lib
+Only in linux-5.9.1/tools/objtool: fixdep
+Only in linux-5.9.1/tools/objtool: objtool
+Only in linux-5.9.1: .version
+Only in linux-5.9.1: vmlinux-gdb.py
